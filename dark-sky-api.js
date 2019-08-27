@@ -53,6 +53,15 @@ class DarkSky {
     return this
   }
 
+  timestamp(time) {
+    if (DarkSky.truthyOrZero(time)) {
+      this.timeVal = time
+    } else {
+      this.timeVal = null
+    }
+    return this
+  }
+
   units(unit) {
     if (unit) {
       this.query.units = unit
